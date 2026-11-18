@@ -145,7 +145,7 @@ Führen Sie die folgenden Schritte aus, um die Python-Anwendung in eine einzelne
 
 Geben Sie den folgenden Befehl in PowerShell ein, um zum Projektordner zu wechseln:
 ```powershell
-   cd "PROJEKTDATEIPFAD"
+cd "PROJEKTDATEIPFAD"
 ```
 
 ### 3. Anwendungssymbol einbetten

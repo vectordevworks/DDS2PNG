@@ -2,12 +2,12 @@ $ErrorActionPreference = "Stop"
 
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 
-$PythonFile = Join-Path $ProjectRoot "Converter.pyw"
+$PythonFile = Join-Path $ProjectRoot "DDSConverter.pyw"
 $IconFile = Join-Path $ProjectRoot "assets\icon.png"
 
 try {
     if (-not (Test-Path $PythonFile)) {
-        throw "Converter.pyw bulunamadi!"
+        throw "DDSConverter.pyw bulunamadi!"
     }
 
     if (-not (Test-Path $IconFile)) {

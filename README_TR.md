@@ -161,7 +161,7 @@ Python uygulamasını tek bir EXE dosyasına dönüştürmek için aşağıdaki 
 PowerShell'e aşağıdaki komutu girerek proje klasörüne geçin:
 
 ```powershell
-   cd "PROJE DOSYA YOLU"
+cd "PROJE DOSYA YOLU"
 ```
 
 ### 3. Uygulama İkonunu Gömme

@@ -145,7 +145,7 @@ Suivez les étapes ci-dessous pour convertir l'application Python en un seul fic
 
 Saisissez la commande suivante dans PowerShell pour accéder au dossier du projet :
 ```powershell
-   cd "CHEMIN DU DOSSIER DU PROJET"
+cd "CHEMIN DU DOSSIER DU PROJET"
 ```
 
 ### 3. Intégrer l'icône de l'application

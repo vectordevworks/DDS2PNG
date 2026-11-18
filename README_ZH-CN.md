@@ -145,7 +145,7 @@ python DDSConverter.pyw
 
 在 PowerShell 中输入以下命令，进入项目文件夹：
 ```powershell
-   cd "项目文件夹路径"
+cd "项目文件夹路径"
 ```
 
 ### 3. 嵌入应用程序图标

@@ -145,7 +145,7 @@ Siga os passos abaixo para converter a aplicação Python num único ficheiro EX
 
 Introduza o seguinte comando no PowerShell para aceder à pasta do projeto:
 ```powershell
-   cd "CAMINHO DA PASTA DO PROJETO"
+cd "CAMINHO DA PASTA DO PROJETO"
 ```
 
 ### 3. Incorporar o ícone da aplicação

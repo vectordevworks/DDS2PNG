@@ -163,7 +163,7 @@ Siga los pasos que se indican a continuaci¨®n para convertir la aplicaci¨®n Pyth
 Introduzca el siguiente comando en PowerShell para acceder a la carpeta del proyecto:
 
 ```powershell
-   cd "RUTA DEL PROYECTO"
+cd "RUTA DEL PROYECTO"
 ```
 
 ### 3. Incrustar el icono de la aplicaci¨®n

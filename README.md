@@ -145,7 +145,7 @@ Follow the steps below to convert the Python application into a single EXE file.
 
 Enter the following command in PowerShell to navigate to the project folder:
 ```powershell
-   cd "PROJECT FILE PATH"
+cd "PROJECT FILE PATH"
 ```
 
 ### 3. Embedding the Application Icon
