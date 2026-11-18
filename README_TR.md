@@ -105,25 +105,30 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam kullanabilirsiniz.
 
-1. Sanal ortam oluşturun:
+1. (Yalnızca PowerShell betik çalıştırma hatası verirse) geçerli oturum için geçici izin verin:
+
+   ```powershell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+2. Sanal ortam oluşturun:
 
    ```powershell
    python -m venv .venv
    ```
 
-2. Sanal ortamı etkinleştirin:
+3. Sanal ortamı etkinleştirin:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-3. Gerekli bağımlılıkları yükleyin:
+4. Gerekli bağımlılıkları yükleyin:
 
    ```powershell
    python -m pip install -r requirements.txt
    ```
 
-4. İşiniz bittiğinde sanal ortamdan çıkın:
+5. İşiniz bittiğinde sanal ortamdan çıkın:
  
    ```powershell
     deactivate 
