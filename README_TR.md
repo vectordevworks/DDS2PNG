@@ -86,7 +86,7 @@ winget list --id Microsoft.DirectXTex.Texconv
 1. Depoyu klonlayın:
 
    ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 
 2. Proje dizinine gidin:

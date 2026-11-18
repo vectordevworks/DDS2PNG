@@ -120,7 +120,7 @@ Si `pip` encuentra un error de permisos al intentar escribir en el directorio de
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 
 2. Accede al directorio del proyecto:

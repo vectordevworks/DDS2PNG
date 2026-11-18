@@ -83,7 +83,7 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 1. 克隆仓库：
    ```
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 2. 进入项目目录：
    ```

@@ -82,7 +82,7 @@ Pythonの依存関係を他のプロジェクトから分離して管理する�
 1. リポジトリをクローンします。
 
    ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 
 2. プロジェクトディレクトリに移動します。

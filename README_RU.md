@@ -83,7 +83,7 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 1. Клонируйте репозиторий:
    ```
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 2. Перейдите в каталог проекта:
    ```

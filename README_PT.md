@@ -120,7 +120,7 @@ Si `pip` rencontre une erreur d'autorisation lorsqu'il tente d'écrire dans le r
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 
 2. Acesse o diretório do projeto:

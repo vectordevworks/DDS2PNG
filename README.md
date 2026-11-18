@@ -119,7 +119,7 @@ If `pip` encounters a permission error when attempting to write to the system-wi
 
 1. Clone the repository:
    ```
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
+   git clone https://github.com/vectordevworks/DDS2PNG.git
    ```
 2. Navigate to the project directory:
    ```
