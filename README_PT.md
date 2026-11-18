@@ -123,7 +123,7 @@ Pode utilizar um ambiente virtual para manter as dependências Python separadas 
 
 Execute a aplicação:
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 Selecione o ficheiro DDS e siga as instruções apresentadas no ecrã para o converter para o formato PNG.
@@ -145,7 +145,7 @@ Siga os passos abaixo para converter a aplicação Python num único ficheiro EX
 
 Introduza o seguinte comando no PowerShell para aceder à pasta do projeto:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "CAMINHO DA PASTA DO PROJETO"
 ```
 
 ### 3. Incorporar o ícone da aplicação
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 Após concluir a incorporação do ícone, execute o seguinte comando para criar o ficheiro EXE:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **Parâmetros do comando:**

@@ -123,7 +123,7 @@ Sie können eine virtuelle Umgebung verwenden, um Python-Abhängigkeiten von and
 
 Anwendung starten:
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 Wählen Sie Ihre DDS-Datei aus und folgen Sie den Anweisungen auf dem Bildschirm, um sie in das PNG-Format zu konvertieren.
@@ -145,7 +145,7 @@ Führen Sie die folgenden Schritte aus, um die Python-Anwendung in eine einzelne
 
 Geben Sie den folgenden Befehl in PowerShell ein, um zum Projektordner zu wechseln:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "PROJEKTDATEIPFAD"
 ```
 
 ### 3. Anwendungssymbol einbetten
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 Führen Sie nach dem Einbetten des Symbols den folgenden Befehl aus, um die EXE-Datei zu erstellen:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **Befehlsparameter:**

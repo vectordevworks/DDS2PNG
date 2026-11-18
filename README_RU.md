@@ -123,7 +123,7 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 Запустите приложение:
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 Выберите DDS-файл и следуйте инструкциям на экране, чтобы преобразовать его в формат PNG.
@@ -145,7 +145,7 @@ python Converter.pyw
 
 Введите следующую команду в PowerShell, чтобы перейти в папку проекта:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "ПУТЬ К ПАПКЕ ПРОЕКТА"
 ```
 
 ### 3. Встраивание значка приложения
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 После завершения встраивания значка выполните следующую команду, чтобы создать EXE-файл:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **Параметры команды:**

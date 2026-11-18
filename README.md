@@ -145,7 +145,7 @@ Follow the steps below to convert the Python application into a single EXE file.
 
 Enter the following command in PowerShell to navigate to the project folder:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "PROJECT FILE PATH"
 ```
 
 ### 3. Embedding the Application Icon
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 After the icon embedding process is complete, run the following command to create the EXE file:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **Command parameters:**

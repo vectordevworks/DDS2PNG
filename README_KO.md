@@ -123,7 +123,7 @@ Python 종속성을 다른 프로젝트와 분리하여 관리하려면 가상 �
 
 애플리케이션을 실행합니다:
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 DDS 파일을 선택하고 화면의 안내에 따라 PNG 형식으로 변환합니다.
@@ -145,7 +145,7 @@ Python 애플리케이션을 하나의 EXE 파일로 변환하려면 다음 단�
 
 PowerShell에 다음 명령어를 입력하여 프로젝트 폴더로 이동합니다:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "프로젝트 폴더 경로"
 ```
 
 ### 3. 애플리케이션 아이콘 삽입
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 아이콘 삽입이 완료되면 다음 명령어를 실행하여 EXE 파일을 생성합니다:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **명령어 매개변수:**

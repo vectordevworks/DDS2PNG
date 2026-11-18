@@ -123,7 +123,7 @@ Pythonの依存関係を他のプロジェクトから分離して管理する�
 
 アプリケーションを起動します：
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 DDSファイルを選択し、画面の指示に従ってPNG形式に変換してください。
@@ -145,7 +145,7 @@ Pythonアプリケーションを単一のEXEファイルに変換するには�
 
 PowerShellで以下のコマンドを実行して、プロジェクトフォルダーに移動します：
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "プロジェクトフォルダーのパス"
 ```
 
 ### 3. アプリケーションのアイコンを埋め込む
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 アイコンの埋め込みが完了したら、以下のコマンドを実行してEXEファイルを作成します：
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **コマンドパラメーター：**

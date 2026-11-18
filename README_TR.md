@@ -138,7 +138,7 @@ Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam 
 Uygulamayı çalıştırın:
 
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 DDS dosyanızı seçin ve PNG biçimine dönüştürmek için ekrandaki talimatları izleyin.
@@ -161,7 +161,7 @@ Python uygulamasını tek bir EXE dosyasına dönüştürmek için aşağıdaki 
 PowerShell'e aşağıdaki komutu girerek proje klasörüne geçin:
 
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "PROJE DOSYA YOLU"
 ```
 
 ### 3. Uygulama İkonunu Gömme
@@ -179,7 +179,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 İkon gömme işlemi tamamlandıktan sonra aşağıdaki komutu çalıştırarak EXE dosyasını oluşturun:
 
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **Komut parametreleri:**

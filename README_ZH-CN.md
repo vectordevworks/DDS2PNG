@@ -123,7 +123,7 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 运行应用程序：
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 选择您的 DDS 文件，并按照屏幕上的说明将其转换为 PNG 格式。
@@ -145,7 +145,7 @@ python Converter.pyw
 
 在 PowerShell 中输入以下命令，进入项目文件夹：
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
+   cd "项目文件夹路径"
 ```
 
 ### 3. 嵌入应用程序图标
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 图标嵌入完成后，运行以下命令以创建 EXE 文件：
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
 ```
 
 **命令参数：**
@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 构建成功完成后，EXE 文件将生成在以下文件夹中：
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **构建新版本时的操作顺序：**
