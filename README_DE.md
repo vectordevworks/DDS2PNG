@@ -145,7 +145,7 @@ Führen Sie die folgenden Schritte aus, um die Python-Anwendung in eine einzelne
 
 Geben Sie den folgenden Befehl in PowerShell ein, um zum Projektordner zu wechseln:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS-to-PNG-Converter"
+cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
 ```
 
 ### 3. Anwendungssymbol einbetten
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 Führen Sie nach dem Einbetten des Symbols den folgenden Befehl aus, um die EXE-Datei zu erstellen:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS-to-PNG-Converter" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
 ```
 
 **Befehlsparameter:**
@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.i
 
 Nach erfolgreicher Kompilierung wird die EXE-Datei im folgenden Ordner erstellt:
 ```text
-dist\DDS-to-PNG-Converter.exe
+dist\Converter.exe
 ```
 
 **Reihenfolge beim Erstellen einer neuen Version:**

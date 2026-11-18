@@ -145,7 +145,7 @@ python Converter.pyw
 
 Введите следующую команду в PowerShell, чтобы перейти в папку проекта:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS-to-PNG-Converter"
+cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
 ```
 
 ### 3. Встраивание значка приложения
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 После завершения встраивания значка выполните следующую команду, чтобы создать EXE-файл:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS-to-PNG-Converter" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
 ```
 
 **Параметры команды:**
@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.i
 
 После успешного завершения сборки EXE-файл будет создан в следующей папке:
 ```text
-dist\DDS-to-PNG-Converter.exe
+dist\Converter.exe
 ```
 
 **Порядок действий при сборке новой версии:**

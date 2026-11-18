@@ -145,7 +145,7 @@ Python 애플리케이션을 하나의 EXE 파일로 변환하려면 다음 단�
 
 PowerShell에 다음 명령어를 입력하여 프로젝트 폴더로 이동합니다:
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS-to-PNG-Converter"
+cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
 ```
 
 ### 3. 애플리케이션 아이콘 삽입
@@ -161,7 +161,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 
 아이콘 삽입이 완료되면 다음 명령어를 실행하여 EXE 파일을 생성합니다:
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS-to-PNG-Converter" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "Converter.pyw"
 ```
 
 **명령어 매개변수:**
@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.i
 
 빌드가 성공적으로 완료되면 EXE 파일이 다음 폴더에 생성됩니다:
 ```text
-dist\DDS-to-PNG-Converter.exe
+dist\Converter.exe
 ```
 
 **새 버전을 빌드할 때의 순서:**

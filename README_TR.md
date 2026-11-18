@@ -161,7 +161,7 @@ Python uygulamasını tek bir EXE dosyasına dönüştürmek için aşağıdaki 
 PowerShell'e aşağıdaki komutu girerek proje klasörüne geçin:
 
 ```powershell
-cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS-to-PNG-Converter"
+cd "D:\vectorrdevworks\Projeler\Yazılım Projeleri\Python\DDS2PNG"
 ```
 
 ### 3. Uygulama İkonunu Gömme
@@ -179,7 +179,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps
 İkon gömme işlemi tamamlandıktan sonra aşağıdaki komutu çalıştırarak EXE dosyasını oluşturun:
 
 ```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS-to-PNG-Converter" "Converter.pyw"
+py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.ico" --name "DDS2PNG" "Converter.pyw"
 ```
 
 **Komut parametreleri:**
@@ -198,7 +198,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.i
 Derleme başarıyla tamamlandığında EXE dosyası aşağıdaki klasörde oluşturulur:
 
 ```text
-dist\DDS-to-PNG-Converter.exe
+dist\Converter.exe
 ```
 
 **Yeni bir sürüm derlerken sıralama:**
