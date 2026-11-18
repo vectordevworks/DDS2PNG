@@ -1,6 +1,4 @@
-
 # -*- coding: utf-8 -*-
-
 from pathlib import Path
 import sys
 import tkinter as tk
@@ -1199,8 +1197,24 @@ class DDSConverter:
 
     def tr(self, text):
 
-        if self.language == "tr":
+        if not isinstance(text, str):
             return text
+
+        # Resolve the original Turkish key even if the incoming text
+        # is already translated in another supported language.
+        source_key = text
+
+        if source_key not in EN:
+            for translations in TRANSLATIONS.values():
+                for turkish, translated in translations.items():
+                    if translated == text:
+                        source_key = turkish
+                        break
+                if source_key != text:
+                    break
+
+        if self.language == "tr":
+            return source_key
 
         language_translations = TRANSLATIONS.get(
             self.language,
@@ -1208,54 +1222,40 @@ class DDSConverter:
         )
 
         return language_translations.get(
-            text,
-            EN.get(text, text)
+            source_key,
+            EN.get(source_key, text)
         )
 
     def translate_runtime_text(self, text):
 
         """
         Translate text that was already displayed before a language change.
-
-        The previous implementation only searched for English source strings.
-        However, the progress/status labels can still contain their original
-        Turkish text when the user changes language directly from Turkish.
-        This version handles both Turkish source strings and English strings.
+        Supports Turkish, English, and already-localized source text.
         """
 
         if not isinstance(text, str) or not text:
             return text
 
-        if self.language == "tr":
-            return text
+        # Translate complete known phrases first.
+        translated = self.tr(text)
+        if translated != text:
+            return translated
 
-        language_translations = TRANSLATIONS.get(
-            self.language,
-            EN
-        )
-
+        # For combined status messages, translate each known phrase.
         replacements = {}
 
         for turkish, english in EN.items():
+            replacements[turkish] = self.tr(turkish)
+            replacements[english] = self.tr(turkish)
 
-            localized = language_translations.get(
-                turkish,
-                english
-            )
+            for translations in TRANSLATIONS.values():
+                localized = translations.get(turkish)
+                if localized:
+                    replacements[localized] = self.tr(turkish)
 
-            replacements[turkish] = localized
-            replacements[english] = localized
-
-        for original in sorted(
-            replacements.keys(),
-            key=len,
-            reverse=True
-        ):
-
-            text = text.replace(
-                original,
-                replacements[original]
-            )
+        for original in sorted(replacements, key=len, reverse=True):
+            if original:
+                text = text.replace(original, replacements[original])
 
         return text
 
