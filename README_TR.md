@@ -198,7 +198,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.i
 Derleme başarıyla tamamlandığında EXE dosyası aşağıdaki klasörde oluşturulur:
 
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **Yeni bir sürüm derlerken sıralama:**

@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 ビルドが正常に完了すると、EXEファイルは以下のフォルダーに作成されます：
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **新しいバージョンをビルドする際の手順：**

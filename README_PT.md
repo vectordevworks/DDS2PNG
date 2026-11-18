@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 Quando a compilação for concluída com sucesso, o ficheiro EXE será criado na seguinte pasta:
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **Ordem dos passos ao compilar uma nova versão:**

@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 After the build completes successfully, the EXE file will be created in the following folder:
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **Build order when creating a new version:**

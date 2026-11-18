@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 빌드가 성공적으로 완료되면 EXE 파일이 다음 폴더에 생성됩니다:
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **새 버전을 빌드할 때의 순서:**

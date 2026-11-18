@@ -179,7 +179,7 @@ py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.p
 
 После успешного завершения сборки EXE-файл будет создан в следующей папке:
 ```text
-dist\Converter.exe
+dist\DDSConverter.exe
 ```
 
 **Порядок действий при сборке новой версии:**
