@@ -119,17 +119,6 @@ You can use a virtual environment to keep Python dependencies separate from othe
    deactivate
    ```
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd "PROJECT FILE PATH"
-   ```
-
 ## Usage
 
 Run the application:

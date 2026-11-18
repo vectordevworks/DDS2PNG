@@ -119,17 +119,6 @@ Vous pouvez utiliser un environnement virtuel afin de garder les dépendances Py
    deactivate
    ```
 
-## Installation
-
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. Accédez au répertoire du projet :
-   ```bash
-   cd "CHEMIN DU DOSSIER DU PROJET"
-   ```
-
 ## Utilisation
 
 Lancez l'application :

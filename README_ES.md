@@ -81,17 +81,6 @@ Puede utilizar un entorno virtual para mantener las dependencias de Python separ
    deactivate
    ```
 
-## Instalación
-
-1. Clone el repositorio:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. Acceda al directorio del proyecto:
-   ```bash
-   cd "RUTA DE LA CARPETA DEL PROYECTO"
-   ```
-
 ## Uso
 
 Ejecute la aplicación:

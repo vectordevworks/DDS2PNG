@@ -119,17 +119,6 @@ winget list --id Microsoft.DirectXTex.Texconv
    deactivate
    ```
 
-## Установка
-
-1. Клонируйте репозиторий:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. Перейдите в каталог проекта:
-   ```bash
-   cd "ПУТЬ К ПАПКЕ ПРОЕКТА"
-   ```
-
 ## Использование
 
 Запустите приложение:

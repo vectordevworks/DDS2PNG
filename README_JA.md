@@ -118,18 +118,7 @@ Pythonの依存関係を他のプロジェクトから分離して管理する�
    ```powershell
    deactivate
    ```
-
-## インストール
-
-1. リポジトリをクローンします：
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. プロジェクトディレクトリに移動します：
-   ```bash
-   cd "プロジェクトフォルダーのパス"
-   ```
-
+   
 ## 使用方法
 
 アプリケーションを起動します：

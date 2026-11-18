@@ -132,19 +132,6 @@ Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam 
  
    ```powershell
     deactivate 
-## Kurulum
-
-1. Depoyu klonlayın:
-
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-
-2. Proje dizinine gidin:
-
-   ```bash
-   cd "PROJE DOSYA YOLU"
-   ```
 
 ## Kullanım
 

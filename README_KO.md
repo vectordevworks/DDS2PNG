@@ -119,17 +119,6 @@ Python 종속성을 다른 프로젝트와 분리하여 관리하려면 가상 �
    deactivate
    ```
 
-## 설치
-
-1. 저장소를 복제합니다:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. 프로젝트 디렉터리로 이동합니다:
-   ```bash
-   cd "프로젝트 폴더 경로"
-   ```
-
 ## 사용 방법
 
 애플리케이션을 실행합니다:

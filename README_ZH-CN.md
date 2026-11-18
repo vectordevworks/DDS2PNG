@@ -119,17 +119,6 @@ winget list --id Microsoft.DirectXTex.Texconv
    deactivate
    ```
 
-## 安装
-
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. 进入项目目录：
-   ```bash
-   cd "项目文件夹路径"
-   ```
-
 ## 使用方法
 
 运行应用程序：

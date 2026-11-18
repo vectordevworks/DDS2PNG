@@ -118,18 +118,7 @@ Pode utilizar um ambiente virtual para manter as dependências Python separadas 
    ```powershell
    deactivate
    ```
-
-## Instalação
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS-to-PNG-Converter.git
-   ```
-2. Aceda ao diretório do projeto:
-   ```bash
-   cd "CAMINHO DA PASTA DO PROJETO"
-   ```
-
+  
 ## Utilização
 
 Execute a aplicação:
