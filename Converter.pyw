@@ -1,4 +1,4 @@
-﻿
+
 # -*- coding: utf-8 -*-
 
 from pathlib import Path
@@ -232,7 +232,7 @@ TRANSLATIONS = {
         'Doku Dönüştürme Stüdyosu': 'Textur-Konvertierungsstudio',
         'Hazır': 'Bereit',
         'DÖNÜŞTÜRME İLERLEMESİ': 'KONVERTIERUNGSFORTSCHRITT',
-        'Bekleniyor...': 'Wird erwartet...',
+        'Bekleniyor...': 'Wartet...',
         'DOSYA LİSTESİ': 'DATEILISTE',
         'Dosya Adı': 'Dateiname',
         'Dosya Konumu': 'Dateipfad',
@@ -242,7 +242,7 @@ TRANSLATIONS = {
         'ÇIKTI KLASÖRÜ': 'AUSGABEORDNER',
         'Kaynak dosyaların bulunduğu klasör': 'Ordner mit Quelldateien',
         'Klasör Seç': 'Durchsuchen',
-        'Bekleniyor': 'Wartend',
+        'Bekleniyor': 'Ausstehend',
         'Tamamlandı': 'Abgeschlossen',
         'Hata': 'Fehler',
         'DDS Dosyalarını Seç': 'DDS-Dateien auswählen',
@@ -1214,6 +1214,18 @@ class DDSConverter:
 
     def translate_runtime_text(self, text):
 
+        """
+        Translate text that was already displayed before a language change.
+
+        The previous implementation only searched for English source strings.
+        However, the progress/status labels can still contain their original
+        Turkish text when the user changes language directly from Turkish.
+        This version handles both Turkish source strings and English strings.
+        """
+
+        if not isinstance(text, str) or not text:
+            return text
+
         if self.language == "tr":
             return text
 
@@ -1222,23 +1234,27 @@ class DDSConverter:
             EN
         )
 
-        english_to_local = {
-            english: language_translations.get(
-                original,
+        replacements = {}
+
+        for turkish, english in EN.items():
+
+            localized = language_translations.get(
+                turkish,
                 english
             )
-            for original, english in EN.items()
-        }
+
+            replacements[turkish] = localized
+            replacements[english] = localized
 
         for original in sorted(
-            english_to_local.keys(),
+            replacements.keys(),
             key=len,
             reverse=True
         ):
 
             text = text.replace(
                 original,
-                english_to_local[original]
+                replacements[original]
             )
 
         return text
