@@ -16,8 +16,8 @@
   <img src="https://flagcdn.com/fr.svg" width="20" alt="Francês"> Francês
 </a>
 |
-<a href="README_RU.md">
-  <img src="https://flagcdn.com/ru.svg" width="20" alt="Russo"> Russo
+<a href="README_JA.md">
+  <img src="https://flagcdn.com/jp.svg" width="20" alt="Japonês"> Japonês
 </a>
 |
 <a href="README_KO.md">
@@ -28,11 +28,11 @@
   <img src="https://flagcdn.com/pt.svg" width="20" alt="Português"> Português
 </a>
 |
-<a href="README_JA.md">
-  <img src="https://flagcdn.com/jp.svg" width="20" alt="Japonês"> Japonês
+<a href="README_RU.md">
+  <img src="https://flagcdn.com/ru.svg" width="20" alt="Russo"> Russo
 </a>
 |
-<a href="README_ZH-CN.md">
+<a href="README_ZH_CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Chinês simplificado"> Chinês simplificado
 </a>
 |
@@ -40,38 +40,53 @@
   <img src="https://flagcdn.com/tr.svg" width="20" alt="Turco"> Turco
 </a>
 
-Uma ferramenta leve de conversão de DDS para PNG, desenvolvida em Python e com uma interface gráfica simples.
+O Conversor de DDS para PNG é uma aplicação de desktop leve, baseada em Python, que permite converter ficheiros de textura no formato DDS (DirectDraw Surface) em imagens PNG. A sua interface gráfica simples permite selecionar ficheiros e realizar conversões facilmente.
 
 ## Visão geral
 
-DDS to PNG Converter é uma aplicação de ambiente de trabalho concebida para converter ficheiros de textura no formato DDS (DirectDraw Surface) em imagens PNG através de uma interface gráfica intuitiva.
+A aplicação converte ficheiros de textura DDS para o formato PNG através do Microsoft DirectXTex (Texconv). A conversão é efetuada através de uma interface gráfica, sem necessidade de utilizar comandos na linha de comandos.
 
-O objetivo do projeto é permitir que os utilizadores convertam ficheiros de textura de forma simples e prática, sem terem de utilizar comandos na linha de comandos.
+A ferramenta Texconv é fornecida juntamente com a aplicação na pasta `assets`.
 
 ## Funcionalidades
 
-- Conversão de ficheiros DDS para o formato PNG.
-- Interface gráfica simples e intuitiva.
-- Aplicação leve baseada em Python.
-- Seleção fácil de ficheiros e processo de conversão simples.
+- **Conversão de DDS para PNG:** Converte ficheiros DDS para o formato PNG.
+
+- **Interface gráfica:** Disponibiliza uma interface simples que facilita a seleção de ficheiros e a conversão.
+
+- **Suporte para Texconv:** Utiliza a ferramenta Microsoft DirectXTex para converter ficheiros DDS.
+
+- **Fácil de utilizar:** Permite converter ficheiros sem recorrer à linha de comandos.
+
 
 ## Requisitos
 
+- Windows
+
 - Python 3.x
+
 - Pillow
-- Microsoft DirectXTex (Texconv): utilizado para converter ficheiros DDS para o formato PNG. É fornecido com a aplicação na pasta `assets`.
+
+- Microsoft DirectXTex (Texconv)
+
+
+Os módulos `tkinter`, `ctypes`, `json`, `math`, `os` e `pathlib` fazem parte da biblioteca padrão do Python.
+
+O Texconv é utilizado para converter ficheiros DDS para o formato PNG e é fornecido com a aplicação na pasta `assets`.
 
 ### Texconv (Transferência opcional)
 
-Se a versão do Texconv incluída no projeto não funcionar ou se pretender transferi-la manualmente, pode utilizar um dos seguintes métodos.
+Se a versão do Texconv incluída no projeto não funcionar ou se pretender transferi-la manualmente, pode utilizar os métodos abaixo.
 
 **PowerShell (Winget):**
-```powershell
+
+```
 winget install --id Microsoft.DirectXTex.Texconv --exact
 ```
 
 Para verificar a instalação:
-```powershell
+
+```
 winget list --id Microsoft.DirectXTex.Texconv
 ```
 
@@ -82,118 +97,111 @@ winget list --id Microsoft.DirectXTex.Texconv
 ## Instalação
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/vectordevworks/DDS2PNG.git
-   ```
-2. Aceda ao diretório do projeto:
-   ```bash
-   cd "CAMINHO DA PASTA DO PROJETO"
-   ```
-3. Instale as dependências necessárias:
-   ```powershell
-   pip install -r requirements.txt
-   ```
 
-### Ambiente virtual (Opcional)
+```
+git clone https://github.com/vectordevworks/DDS2PNG.git
+```
 
-Pode utilizar um ambiente virtual para manter as dependências Python separadas das de outros projetos.
+2. Abra a pasta do projeto.
 
-1. (Apenas se o PowerShell apresentar um erro ao executar o script) Permita temporariamente a execução de scripts na sessão atual:
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   ```
-2. Crie um ambiente virtual:
-   ```powershell
-   python -m venv .venv
-   ```
-3. Ative o ambiente virtual:
-   ```powershell
-   .venv\Scripts\activate
-   ```
-4. Instale as dependências necessárias:
-   ```powershell
-   python -m pip install -r requirements.txt
-   ```
-5. Quando terminar, saia do ambiente virtual:
-   ```powershell
-   deactivate
-   ```
-  
+3. Inicie o PowerShell nesta pasta.
+
+4. Instale os pacotes Python necessários:
+
+```
+py -m pip install -r requirements.txt
+```
+
+## Ambiente virtual (opcional)
+
+Pode utilizar um ambiente virtual para manter as dependências Python separadas de outros projetos:
+
+1. Crie um ambiente virtual:
+
+```
+py -m venv .venv
+```
+
+2. Ative o ambiente virtual:
+
+```
+.\.venv\Scripts\Activate.ps1
+```
+
+3. Instale os pacotes Python necessários:
+
+```
+py -m pip install -r requirements.txt
+```
+
+4. Quando terminar, desative o ambiente virtual:
+
+```
+deactivate
+```
+
 ## Utilização
 
-Execute a aplicação:
-```bash
-python DDSConverter.pyw
+1. Execute o ficheiro `DDSConverter.pyw`:
+
+```
+pyw .\DDSConverter.pyw
 ```
 
-Selecione o ficheiro DDS e siga as instruções apresentadas no ecrã para o converter para o formato PNG.
+Em alternativa:
 
-## Compilação (Criar EXE)
-
-Siga os passos abaixo para converter a aplicação Python num único ficheiro EXE.
-
-**Importante:** Abra o PowerShell como utilizador normal, e não como administrador. Não são necessários privilégios de administrador.
-
-### 1. Abrir o PowerShell
-
-1. Abra o menu Iniciar do Windows.
-2. Escreva `PowerShell` ou `Windows Terminal` na caixa de pesquisa.
-3. Abra normalmente o Windows PowerShell ou o Windows Terminal.
-4. Não utilize a opção «Executar como administrador».
-
-### 2. Aceder à pasta do projeto
-
-Introduza o seguinte comando no PowerShell para aceder à pasta do projeto:
-```powershell
-cd "CAMINHO DA PASTA DO PROJETO"
+```
+pythonw .\DDSConverter.pyw
 ```
 
-### 3. Incorporar o ícone da aplicação
+2. Selecione o ficheiro DDS que pretende converter.
 
-O comando seguinte executa o script `embed_icon.ps1` para incorporar o ícone da aplicação no ficheiro Python.
-```powershell
+3. Pode selecionar a pasta `convert` existente como pasta de saída ou escolher qualquer outra pasta.
+
+4. Efetue a conversão para o formato PNG.
+
+## Compilação (criar EXE)
+
+O PyInstaller é utilizado para converter a aplicação Python num único ficheiro EXE.
+
+### 1. Aceder à pasta do projeto
+
+Abra o PowerShell na pasta do projeto.
+
+### 2. Incorporar o ícone e as imagens dos idiomas
+
+Execute o script `embed_icon.ps1` através do comando abaixo. Este script incorpora no ficheiro Python o ícone da aplicação e as imagens PNG utilizadas na seleção do idioma.
+
+```
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps1"
 ```
 
-**Nota:** É utilizado `-ExecutionPolicy Bypass` porque a política de execução do Windows pode impedir a execução de scripts PowerShell. Esta configuração aplica-se apenas ao processo PowerShell iniciado. As definições de segurança de todo o sistema não são alteradas.
+**Nota:** O parâmetro `-ExecutionPolicy Bypass` é utilizado quando a política de execução do Windows pode impedir a execução de scripts do PowerShell. Este parâmetro aplica-se apenas ao processo do PowerShell iniciado e não altera as definições de segurança de todo o sistema.
 
-### 4. Compilar com PyInstaller
+### 3. Resultado da compilação
 
-Após concluir a incorporação do ícone, execute o seguinte comando para criar o ficheiro EXE:
-```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
+Quando a compilação for concluída com sucesso, o ficheiro EXE será criado na seguinte localização:
+
+```
+dist\DDS2PNG.exe
 ```
 
-**Parâmetros do comando:**
+**Passos para compilar uma nova versão:**
 
-| Parâmetro | Descrição |
-|---|---|
-| `--noconfirm` | Executa a compilação sem pedir confirmação. |
-| `--clean` | Limpa a cache das compilações anteriores. |
-| `--onefile` | Cria um único ficheiro EXE. |
-| `--windowed` | Não apresenta uma janela de consola. |
-| `--icon` | Define o ícone do ficheiro EXE. |
-| `--name` | Define o nome do ficheiro EXE a criar. |
+1. Abra o PowerShell.
 
-### 5. Resultado da compilação
+2. Certifique-se de que o PyInstaller está instalado.
 
-Quando a compilação for concluída com sucesso, o ficheiro EXE será criado na seguinte pasta:
-```text
-dist\DDSConverter.exe
-```
+3. Aceda à pasta do projeto.
 
-**Ordem dos passos ao compilar uma nova versão:**
+4. Execute o script de compilação.
 
-1. Abra o PowerShell como utilizador normal.
-2. Aceda à pasta do projeto.
-3. Execute o comando para incorporar o ícone.
-4. Execute o comando de compilação do PyInstaller.
-5. Obtenha o ficheiro EXE criado na pasta `dist`.
+5. Pode encontrar o ficheiro EXE gerado na pasta `dist`.
 
-## Desenvolvedor
+## Programador
 
 **vectordevworks**
 
 ## Licença
 
-Este projeto está licenciado ao abrigo da Licença MIT. Consulte o ficheiro LICENSE para obter mais informações.
+Este projeto está licenciado ao abrigo da Licença MIT. Consulte o ficheiro `LICENSE` no repositório do projeto para obter mais informações.

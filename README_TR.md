@@ -32,7 +32,7 @@
   <img src="https://flagcdn.com/ru.svg" width="20" alt="Rusça"> Rusça
 </a>
 |
-<a href="README_ZH-CN.md">
+<a href="README_ZH_CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Basitleştirilmiş Çince"> Basitleştirilmiş Çince
 </a>
 |
@@ -40,26 +40,39 @@
   <img src="https://flagcdn.com/tr.svg" width="20" alt="Türkçe"> Türkçe
 </a>
 
-Basit bir grafik arayüzüne sahip, Python tabanlı hafif bir DDS'den PNG'ye dönüştürme aracı.
+DDS'den PNG'ye Dönüştürücü, DDS (DirectDraw Surface) biçimindeki doku dosyalarını PNG görüntülerine dönüştürmenizi sağlayan, Python tabanlı hafif bir masaüstü uygulamasıdır. Basit grafik arayüzü sayesinde dosyalarınızı kolayca seçebilir ve dönüştürme işlemini gerçekleştirebilirsiniz.
 
 ## Genel Bakış
 
-DDS to PNG Converter, DDS (DirectDraw Surface) biçimindeki doku dosyalarını sezgisel bir grafik arayüzü aracılığıyla PNG görüntülerine dönüştürmek için geliştirilmiş bir masaüstü uygulamasıdır.
+Uygulama, DDS biçimindeki doku dosyalarını Microsoft DirectXTex (Texconv) aracılığıyla PNG formatına dönüştürür. Dönüştürme işlemi grafik arayüzü üzerinden gerçekleştirilir; komut satırı komutlarıyla uğraşmanız gerekmez.
 
-Projenin amacı, kullanıcıların komut satırı komutlarıyla uğraşmasına gerek kalmadan doku dosyalarını kolay ve pratik bir şekilde dönüştürebilmesini sağlamaktır.
+Texconv aracı uygulamayla birlikte `assets` klasöründe sunulur.
 
 ## Özellikler
 
-- DDS dosyalarını PNG biçimine dönüştürme.
-- Basit ve kullanıcı dostu grafik arayüzü.
-- Python tabanlı, hafif uygulama.
-- Kolay dosya seçimi ve dönüştürme süreci.
+- **DDS'den PNG'ye dönüştürme:** DDS dosyalarını PNG formatına dönüştürür.
+    
+- **Grafik arayüz:** Dosya seçme ve dönüştürme işlemlerini kolaylaştıran basit bir arayüz sunar.
+    
+- **Texconv desteği:** DDS dosyalarının dönüştürülmesi için Microsoft DirectXTex aracını kullanır.
+    
+- **Kolay kullanım:** Dönüştürme işlemini komut satırı kullanmadan gerçekleştirmenizi sağlar.
+    
 
 ## Gereksinimler
 
+- Windows
+    
 - Python 3.x
+    
 - Pillow
-- Microsoft DirectXTex (Texconv): DDS dosyalarını PNG formatına dönüştürmek için kullanılır. Uygulamayla birlikte `assets` klasöründe sunulur.
+    
+- Microsoft DirectXTex (Texconv)
+    
+
+`tkinter`, `ctypes`, `json`, `math`, `os` ve `pathlib` modülleri Python standart kütüphanesinin bir parçasıdır.
+
+Texconv, DDS dosyalarını PNG formatına dönüştürmek için kullanılır ve uygulamayla birlikte `assets` klasöründe sunulur.
 
 ### Texconv (İsteğe Bağlı İndirme)
 
@@ -67,13 +80,13 @@ Projeyle birlikte sunulan Texconv çalışmazsa veya manuel olarak indirmek iste
 
 **PowerShell (Winget):**
 
-```powershell
+```
 winget install --id Microsoft.DirectXTex.Texconv --exact
 ```
 
 Kurulumu kontrol etmek için:
 
-```powershell
+```
 winget list --id Microsoft.DirectXTex.Texconv
 ```
 
@@ -84,132 +97,113 @@ winget list --id Microsoft.DirectXTex.Texconv
 ## Kurulum
 
 1. Depoyu klonlayın:
+    
 
-   ```bash
-   git clone https://github.com/vectordevworks/DDS2PNG.git
-   ```
+```
+git clone https://github.com/vectordevworks/DDS2PNG.git
+```
 
-2. Proje dizinine gidin:
+2. Proje klasörünü açın.
+    
+3. PowerShell'i bu klasörde başlatın.
+    
+4. Gerekli Python paketlerini yükleyin:
+    
 
-   ```bash
-   cd "PROJE DOSYA YOLU"
-   ```
+```
+py -m pip install -r requirements.txt
+```
+
+## Sanal Ortam (İsteğe Bağlı)
+
+Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam kullanabilirsiniz:
+
+1. Sanal ortam oluşturun:
+    
+
+```
+py -m venv .venv
+```
+
+2. Sanal ortamı etkinleştirin:
+    
+
+```
+.\.venv\Scripts\Activate.ps1
+```
 
 3. Gerekli bağımlılıkları yükleyin:
+    
 
-   ```powershell
-   pip install -r requirements.txt
-   ```
+```
+py -m pip install -r requirements.txt
+```
 
-### Sanal Ortam (İsteğe Bağlı)
+4. İşiniz bittiğinde sanal ortamı devre dışı bırakın:
+    
 
-Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam kullanabilirsiniz.
-
-1. (Yalnızca PowerShell betik çalıştırma hatası verirse) geçerli oturum için geçici izin verin:
-
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   ```
-
-2. Sanal ortam oluşturun:
-
-   ```powershell
-   python -m venv .venv
-   ```
-
-3. Sanal ortamı etkinleştirin:
-
-   ```powershell
-   .venv\Scripts\activate
-   ```
-
-4. Gerekli bağımlılıkları yükleyin:
-
-   ```powershell
-   python -m pip install -r requirements.txt
-   ```
-
-5. İşiniz bittiğinde sanal ortamdan çıkın:
- 
-   ```powershell
-   deactivate
-   ```
+```
+deactivate
+```
 
 ## Kullanım
 
-Uygulamayı çalıştırın:
+1. `DDSConverter.pyw` dosyasını çalıştırın:
+    
 
-```bash
-python DDSConverter.pyw
+```
+pyw .\DDSConverter.pyw
 ```
 
-DDS dosyanızı seçin ve PNG biçimine dönüştürmek için ekrandaki talimatları izleyin.
+Alternatif olarak:
+
+```
+pythonw .\DDSConverter.pyw
+```
+
+2. Dönüştürmek istediğiniz DDS dosyasını seçin.
+    
+3. Çıktı klasörü olarak mevcut `convert` klasörünü seçebilir veya dilediğiniz klasörü belirleyebilirsiniz.
+    
+4. PNG formatına dönüştürme işlemini gerçekleştirin.
 
 ## Derleme (EXE Oluşturma)
 
-Python uygulamasını tek bir EXE dosyasına dönüştürmek için aşağıdaki adımları izleyin.
+Python uygulamasını tek bir EXE dosyasına dönüştürmek için PyInstaller kullanılır.
 
-**Önemli:** PowerShell'i yönetici olarak değil, normal kullanıcı olarak çalıştırın. Yönetici izinlerine ihtiyaç yoktur.
+### 1. Proje Klasörüne Geçiş
 
-### 1. PowerShell'i Açma
+PowerShell'i proje klasöründe açın.
 
-1. Windows Başlat menüsünü açın.
-2. Arama bölümüne `PowerShell` veya `Windows Terminal` yazın.
-3. Windows PowerShell'i veya Windows Terminal'i normal şekilde açın.
-4. Yönetici olarak çalıştır seçeneğini kullanmayın.
+### 2. İkon ve Dil Görsellerini Gömme
 
-### 2. Proje Klasörüne Geçiş
+Aşağıdaki komutu çalıştırarak `embed_icon.ps1` betiğini başlatın. Bu betik, uygulama simgesini ve dil seçimi için kullanılan PNG görsellerini Python dosyasına gömer.
 
-PowerShell'e aşağıdaki komutu girerek proje klasörüne geçin:
-
-```powershell
-cd "PROJE DOSYA YOLU"
 ```
-
-### 3. Uygulama İkonunu Gömme
-
-Aşağıdaki komut, `embed_icon.ps1` betiğini çalıştırarak uygulama ikonunu Python dosyasına gömer.
-
-```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\embed_icon.ps1"
 ```
 
-**Not:** Windows'un PowerShell betiklerini çalıştırmasını engelleyen yürütme ilkesi nedeniyle `-ExecutionPolicy Bypass` kullanılır. Bu ayar yalnızca başlatılan PowerShell işlemi için geçerlidir. Sistem genelindeki güvenlik ayarları değiştirilmez.
+**Not:** `-ExecutionPolicy Bypass` parametresi, Windows'un yürütme ilkesi nedeniyle PowerShell betiklerinin çalıştırılmasını engelleyebildiği durumlarda kullanılır. Bu parametre yalnızca başlatılan PowerShell işlemi için geçerlidir ve sistem genelindeki güvenlik ayarlarını değiştirmez.
+### 3. Derleme Çıktısı
 
-### 4. PyInstaller ile Derleme
+Derleme başarıyla tamamlandığında EXE dosyası aşağıdaki konumda oluşturulur:
 
-İkon gömme işlemi tamamlandıktan sonra aşağıdaki komutu çalıştırarak EXE dosyasını oluşturun:
-
-```powershell
-py -m PyInstaller --noconfirm --clean --onefile --windowed --icon="assets\icon.png" --name "DDS2PNG" "DDSConverter.pyw"
+```
+dist\DDS2PNG.exe
 ```
 
-**Komut parametreleri:**
+**Yeni bir sürüm derlemek için izlenecek adımlar:**
 
-| Parametre | Açıklama |
-|---|---|
-| `--noconfirm` | Onay istemeden derleme yapar. |
-| `--clean` | Önceki derleme önbelleğini temizler. |
-| `--onefile` | Tek bir EXE dosyası oluşturur. |
-| `--windowed` | Konsol penceresini göstermez. |
-| `--icon` | EXE dosyasının ikonunu belirler. |
-| `--name` | Oluşturulacak EXE dosyasının adını belirler. |
-
-### 5. Derleme Çıktısı
-
-Derleme başarıyla tamamlandığında EXE dosyası aşağıdaki klasörde oluşturulur:
-
-```text
-dist\DDSConverter.exe
-```
-
-**Yeni bir sürüm derlerken sıralama:**
-
-1. PowerShell'i normal kullanıcı olarak açın.
-2. Proje klasörüne geçin.
-3. İkon gömme komutunu çalıştırın.
-4. PyInstaller derleme komutunu çalıştırın.
-5. Oluşturulan EXE dosyasını `dist` klasöründen alın.
+1. PowerShell'i açın.
+    
+2. PyInstaller'ın kurulu olduğundan emin olun.
+    
+3. Proje klasörüne geçin.
+    
+4. Derleme betiğini çalıştırın.
+    
+5. Oluşturulan EXE dosyasını `dist` klasöründe bulabilirsiniz.
+    
 
 ## Geliştirici
 
@@ -217,4 +211,4 @@ dist\DDSConverter.exe
 
 ## Lisans
 
-Bu proje MIT Lisansı altında lisanslanmıştır. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
+Bu proje MIT Lisansı altında lisanslanmıştır. Ayrıntılar için proje deposundaki `LICENSE` dosyasına bakın.

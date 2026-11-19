@@ -1,81 +1,134 @@
+
 $ErrorActionPreference = "Stop"
 
-$ProjectRoot = Split-Path -Parent $PSScriptRoot
+# ============================================================
+# DDS2PNG - PATH CONFIGURATION
+# ============================================================
 
-$PythonFile = Join-Path $ProjectRoot "DDSConverter.pyw"
-$IconFile = Join-Path $ProjectRoot "assets\icon.png"
+# Build.ps1 dosyasinin scripts klasorunde oldugu varsayilir.
+$ProjectDir = Split-Path -Parent $PSScriptRoot
 
-try {
-    if (-not (Test-Path $PythonFile)) {
-        throw "DDSConverter.pyw bulunamadi!"
-    }
+$MainFile = Join-Path $ProjectDir "DDSConverter.pyw"
 
-    if (-not (Test-Path $IconFile)) {
-        throw "assets\icon.png bulunamadi!"
-    }
+$AssetsDir = Join-Path $ProjectDir "assets"
+$IconFile = Join-Path $AssetsDir "icon.png"
+$LanguageIconFile = Join-Path $AssetsDir "language.png"
 
-    $IconBytes = [System.IO.File]::ReadAllBytes($IconFile)
+$DistDir = Join-Path $ProjectDir "dist"
+$BuildDir = Join-Path $ProjectDir "build"
 
-    # PNG imzasini kontrol et
-    $PngSignature = [byte[]](137, 80, 78, 71, 13, 10, 26, 10)
+$IconIcoFile = Join-Path $BuildDir "DDSConverter.ico"
 
-    for ($i = 0; $i -lt 8; $i++) {
-        if ($IconBytes[$i] -ne $PngSignature[$i]) {
-            throw "icon.png gecerli bir PNG dosyasi degil!"
-        }
-    }
+Write-Host ""
+Write-Host "========================================"
+Write-Host " DDS2PNG - BUILD"
+Write-Host " VECTORDEVWORKS"
+Write-Host "========================================"
+Write-Host ""
 
-    $Base64 = [Convert]::ToBase64String($IconBytes)
+# ============================================================
+# FILE CHECKS
+# ============================================================
 
-    $Source = [System.IO.File]::ReadAllText($PythonFile)
+Write-Host "[1/5] Dosyalar kontrol ediliyor..."
 
-    $IconCode = @"
-    # EMBEDDED APPLICATION ICON
-    import base64
-
-    _EMBEDDED_ICON_DATA = "$Base64"
-
-    _icon_image = tk.PhotoImage(
-        data=_EMBEDDED_ICON_DATA
-    )
-
-    root.iconphoto(True, _icon_image)
-    root._icon_reference = _icon_image
-"@
-
-    $BlockPattern = '(?ms)^[ \t]*# EMBEDDED APPLICATION ICON.*?^[ \t]*root\._icon_reference = _icon_image[ \t]*\r?\n?'
-
-    $Source = [regex]::Replace($Source, $BlockPattern, "")
-
-    $RootPattern = '(?m)^(\s*)root\s*=\s*tk\.Tk\(\)\s*$'
-
-    if ($Source -notmatch $RootPattern) {
-        throw "root = tk.Tk() satiri bulunamadi!"
-    }
-
-    $Source = [regex]::Replace(
-        $Source,
-        $RootPattern,
-        {
-            param($Match)
-            return $Match.Value + "`r`n" + $IconCode.TrimEnd()
-        },
-        1
-    )
-
-    [System.IO.File]::WriteAllText(
-        $PythonFile,
-        $Source,
-        [System.Text.UTF8Encoding]::new($false)
-    )
-
-    Write-Host ""
-    Write-Host "PNG ikon basariyla gomuldu!" -ForegroundColor Green
-    Write-Host "Kaynak: $IconFile"
-    Write-Host "Hedef: $PythonFile"
+if (!(Test-Path $MainFile)) {
+    throw "Ana Python dosyasi bulunamadi: $MainFile"
 }
-catch {
-    Write-Host ""
-    Write-Host "HATA: $_" -ForegroundColor Red
-    exit 1
+
+if (!(Test-Path $AssetsDir)) {
+    throw "Assets klasoru bulunamadi: $AssetsDir"
 }
+
+if (!(Test-Path $IconFile)) {
+    throw "PNG uygulama simgesi bulunamadi: $IconFile"
+}
+
+if (!(Test-Path $LanguageIconFile)) {
+    throw "Dil simgesi bulunamadi: $LanguageIconFile"
+}
+
+# ============================================================
+# PYINSTALLER CHECK
+# ============================================================
+
+Write-Host "[2/5] PyInstaller kontrol ediliyor..."
+
+python -m PyInstaller --version
+
+if ($LASTEXITCODE -ne 0) {
+    throw "PyInstaller yuklu degil veya calistirilamadi."
+}
+
+# ============================================================
+# CLEAN OLD BUILD FILES
+# ============================================================
+
+Write-Host "[3/5] Eski derleme dosyalari temizleniyor..."
+
+Remove-Item $DistDir -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item $BuildDir -Recurse -Force -ErrorAction SilentlyContinue
+
+New-Item -ItemType Directory -Path $BuildDir -Force | Out-Null
+
+# ============================================================
+# CONVERT PNG ICON TO ICO
+# ============================================================
+
+Write-Host "ICO simgesi hazirlaniyor..."
+
+python -c "import sys; from PIL import Image; Image.open(sys.argv[1]).convert('RGBA').save(sys.argv[2], format='ICO', sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)])" $IconFile $IconIcoFile
+
+if ($LASTEXITCODE -ne 0 -or !(Test-Path $IconIcoFile)) {
+    throw "PNG simgesi ICO formatina donusturulemedi. Pillow yuklu oldugundan emin olun: python -m pip install pillow"
+}
+
+# ============================================================
+# BUILD EXE
+# ============================================================
+
+Write-Host "[4/5] EXE derleniyor..."
+
+python -m PyInstaller `
+    --noconfirm `
+    --clean `
+    --onefile `
+    --windowed `
+    --name "DDS2PNG" `
+    --icon $IconIcoFile `
+    --add-data "$AssetsDir;assets" `
+    --distpath $DistDir `
+    --workpath $BuildDir `
+    --specpath $BuildDir `
+    $MainFile
+
+if ($LASTEXITCODE -ne 0) {
+    throw "Derleme basarisiz!"
+}
+
+# ============================================================
+# OUTPUT CHECK
+# ============================================================
+
+Write-Host "[5/5] EXE kontrol ediliyor..."
+
+$ExeFile = Join-Path $DistDir "DDS2PNG.exe"
+
+if (!(Test-Path $ExeFile)) {
+    throw "EXE dosyasi olusturulamadi: $ExeFile"
+}
+
+# ============================================================
+# SUCCESS
+# ============================================================
+
+Write-Host ""
+Write-Host "========================================"
+Write-Host " BUILD SUCCESSFUL"
+Write-Host "========================================"
+Write-Host ""
+Write-Host "EXE: $ExeFile"
+Write-Host "Assets: $AssetsDir"
+Write-Host "Icon: icon.png"
+Write-Host "Language Icon: language.png"
+Write-Host ""

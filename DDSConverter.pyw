@@ -44,7 +44,7 @@ APP_NAMES = {
     "ko": "DDS-PNG 변환기"
 }
 
-VERSION = "1.0"
+VERSION = "1.0.0"
 DEVELOPER = "vectordevworks"
 
 
@@ -70,7 +70,11 @@ def resource_path(relative_path):
     return base_path / relative_path
 
 
-APP_DIR = Path(__file__).resolve().parent
+APP_DIR = (
+    Path(sys.executable).resolve().parent
+    if getattr(sys, "frozen", False)
+    else Path(__file__).resolve().parent
+)
 
 ASSETS_DIR = resource_path("assets")
 
@@ -129,6 +133,7 @@ EN = {
     "Kaynak dosyaların bulunduğu klasör":
         "Folder containing source files",
     "Klasör Seç": "Browse",
+    "Varsayılanı Kullan": "Use Default",
 
     "Bekleniyor": "Waiting",
     "Tamamlandı": "Completed",
@@ -1028,7 +1033,7 @@ class DDSConverter:
         self.files = []
         self.file_status = {}
 
-        self.output_dir = None
+        self.output_dir = APP_DIR / "convert"
 
         self.is_converting = False
         self.is_closing = False
@@ -2398,6 +2403,14 @@ class DDSConverter:
             self.select_output,
             "#263B60",
             "#34517F"
+        ).pack(side="right", padx=(8, 0))
+
+        RoundedButton(
+            output_row,
+            self.tr("Varsayılanı Kullan"),
+            self.use_default_output,
+            "#263B60",
+            "#34517F"
         ).pack(side="right")
 
     # ========================================================
@@ -2526,6 +2539,15 @@ class DDSConverter:
     # ========================================================
     # OUTPUT FOLDER
     # ========================================================
+
+    def use_default_output(self):
+
+        if self.is_converting:
+            return
+
+        self.output_dir = APP_DIR / "convert"
+        self.output_label.config(text=str(self.output_dir))
+        self.set_status(self.tr("Çıktı klasörü güncellendi."))
 
     def select_output(self):
 
