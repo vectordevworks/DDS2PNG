@@ -32,7 +32,7 @@
   <img src="https://flagcdn.com/jp.svg" width="20" alt="Японский"> Японский
 </a>
 |
-<a href="README_ZH_CN.md">
+<a href="README_ZH-CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Упрощённый китайский"> Упрощённый китайский
 </a>
 |

@@ -32,7 +32,7 @@
   <img src="https://flagcdn.com/jp.svg" width="20" alt="Japanese"> Japanese
 </a>
 |
-<a href="README_ZH_CN.md">
+<a href="README_ZH-CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Simplified Chinese"> Simplified Chinese
 </a>
 |
@@ -123,7 +123,7 @@ You can use a virtual environment to keep Python dependencies separate from othe
 
 Run the application:
 ```bash
-python Converter.pyw
+python DDSConverter.pyw
 ```
 
 Select your DDS file and follow the on-screen instructions to convert it to PNG format.
@@ -197,4 +197,3 @@ dist\DDSConverter.exe
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-

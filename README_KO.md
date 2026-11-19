@@ -32,7 +32,7 @@
   <img src="https://flagcdn.com/jp.svg" width="20" alt="일본어"> 일본어
 </a>
 |
-<a href="README_ZH_CN.md">
+<a href="README_ZH-CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="중국어(간체)"> 중국어(간체)
 </a>
 |

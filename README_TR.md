@@ -32,7 +32,7 @@
   <img src="https://flagcdn.com/ru.svg" width="20" alt="Rusça"> Rusça
 </a>
 |
-<a href="README_ZH_CN.md">
+<a href="README_ZH-CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Basitleştirilmiş Çince"> Basitleştirilmiş Çince
 </a>
 |
@@ -109,6 +109,7 @@ Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam 
 
    ```powershell
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   ```
 
 2. Sanal ortam oluşturun:
 
@@ -131,7 +132,8 @@ Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam 
 5. İşiniz bittiğinde sanal ortamdan çıkın:
  
    ```powershell
-    deactivate 
+   deactivate
+   ```
 
 ## Kullanım
 
