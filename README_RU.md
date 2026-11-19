@@ -1,4 +1,4 @@
-# Конвертер DDS в PNG
+# DDS2PNG
 
 <a href="README.md">
   <img src="https://flagcdn.com/gb.svg" width="20" alt="Английский"> Английский
@@ -28,9 +28,9 @@
   <img src="https://flagcdn.com/pt.svg" width="20" alt="Португальский"> Португальский
 </a>
 |
-<a href="README_RU.md">
+<strong>
   <img src="https://flagcdn.com/ru.svg" width="20" alt="Русский"> Русский
-</a>
+</strong>
 |
 <a href="README_ZH_CN.md">
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Упрощённый китайский"> Упрощённый китайский
@@ -39,6 +39,7 @@
 <a href="README_TR.md">
   <img src="https://flagcdn.com/tr.svg" width="20" alt="Турецкий"> Турецкий
 </a>
+
 
 Конвертер DDS в PNG — это лёгкое настольное приложение на Python, предназначенное для преобразования текстурных файлов формата DDS (DirectDraw Surface) в изображения PNG. Простой графический интерфейс позволяет легко выбирать файлы и выполнять преобразование.
 

@@ -1,6 +1,6 @@
-# DDS から PNG への変換ツール
+# DDS2PNG
 
-<a href="README.md">
+a href="README.md">
   <img src="https://flagcdn.com/gb.svg" width="20" alt="英語"> 英語
 </a>
 |
@@ -16,9 +16,9 @@
   <img src="https://flagcdn.com/fr.svg" width="20" alt="フランス語"> フランス語
 </a>
 |
-<a href="README_JA.md">
+<strong>
   <img src="https://flagcdn.com/jp.svg" width="20" alt="日本語"> 日本語
-</a>
+</strong>
 |
 <a href="README_KO.md">
   <img src="https://flagcdn.com/kr.svg" width="20" alt="韓国語"> 韓国語

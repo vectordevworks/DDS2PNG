@@ -1,4 +1,4 @@
-# Convertidor de DDS a PNG
+# DDS2PNG
 
 <a href="README.md">
   <img src="https://flagcdn.com/gb.svg" width="20" alt="Inglés"> Inglés
@@ -8,9 +8,9 @@
   <img src="https://flagcdn.com/de.svg" width="20" alt="Alemán"> Alemán
 </a>
 |
-<a href="README_ES.md">
+<strong>
   <img src="https://flagcdn.com/es.svg" width="20" alt="Español"> Español
-</a>
+</strong>
 |
 <a href="README_FR.md">
   <img src="https://flagcdn.com/fr.svg" width="20" alt="Francés"> Francés

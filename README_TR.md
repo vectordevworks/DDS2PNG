@@ -1,4 +1,4 @@
-# DDS'den PNG'ye Dönüştürücü
+# DDS2PNG
 
 <a href="README.md">
   <img src="https://flagcdn.com/gb.svg" width="20" alt="İngilizce"> İngilizce
@@ -36,9 +36,9 @@
   <img src="https://flagcdn.com/cn.svg" width="20" alt="Basitleştirilmiş Çince"> Basitleştirilmiş Çince
 </a>
 |
-<a href="README_TR.md">
+<strong>
   <img src="https://flagcdn.com/tr.svg" width="20" alt="Türkçe"> Türkçe
-</a>
+</strong>
 
 DDS'den PNG'ye Dönüştürücü, DDS (DirectDraw Surface) biçimindeki doku dosyalarını PNG görüntülerine dönüştürmenizi sağlayan, Python tabanlı hafif bir masaüstü uygulamasıdır. Basit grafik arayüzü sayesinde dosyalarınızı kolayca seçebilir ve dönüştürme işlemini gerçekleştirebilirsiniz.
 
