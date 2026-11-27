@@ -47,7 +47,7 @@ Python tabanlı, hafif ve kullanımı kolay masaüstü uygulaması.
 
 ---
 
-## 🔍 Genel Bakış
+#genel-bakis
 
 **DDS2PNG**, DDS (DirectDraw Surface) biçimindeki doku dosyalarını PNG formatına dönüştürmenizi sağlayan, Python tabanlı hafif bir masaüstü uygulamasıdır.
 
