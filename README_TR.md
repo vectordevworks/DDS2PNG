@@ -1,95 +1,81 @@
-
 <div align="center">
 
-<a href="README.md">
-  <img src="https://flagcdn.com/gb.svg" width="20" alt="İngilizce"> İngilizce
-</a>
-|
-<a href="README_DE.md">
-  <img src="https://flagcdn.com/de.svg" width="20" alt="Almanca"> Almanca
-</a>
-|
-<a href="README_ES.md">
-  <img src="https://flagcdn.com/es.svg" width="20" alt="İspanyolca"> İspanyolca
-</a>
-|
-<a href="README_FR.md">
-  <img src="https://flagcdn.com/fr.svg" width="20" alt="Fransızca"> Fransızca
-</a>
-|
-<a href="README_JA.md">
-  <img src="https://flagcdn.com/jp.svg" width="20" alt="Japonca"> Japonca
-</a>
-|
-<a href="README_KO.md">
-  <img src="https://flagcdn.com/kr.svg" width="20" alt="Korece"> Korece
-</a>
-|
-<a href="README_PT.md">
-  <img src="https://flagcdn.com/pt.svg" width="20" alt="Portekizce"> Portekizce
-</a>
-|
-<a href="README_RU.md">
-  <img src="https://flagcdn.com/ru.svg" width="20" alt="Rusça"> Rusça
-</a>
-|
-<a href="README_ZH_CN.md">
-  <img src="https://flagcdn.com/cn.svg" width="20" alt="Basitleştirilmiş Çince"> Basitleştirilmiş Çince
-</a>
-|
-<strong>
-  <img src="https://flagcdn.com/tr.svg" width="20" alt="Türkçe"> Türkçe
-</strong>
+# DDS2PNG
 
-</div>
+### DDS'den PNG'ye Dönüştürücü
 
-# DDS'den PNG'ye Dönüştürücü
+DDS (DirectDraw Surface) biçimindeki doku dosyalarını kolayca PNG formatına dönüştürün.
 
-DDS'den PNG'ye Dönüştürücü, DDS (DirectDraw Surface) biçimindeki doku dosyalarını PNG görüntülerine dönüştürmenizi sağlayan, Python tabanlı hafif bir masaüstü uygulamasıdır. Basit grafik arayüzü sayesinde dosyalarınızı kolayca seçebilir ve dönüştürme işlemini gerçekleştirebilirsiniz.
+Python tabanlı, hafif ve kullanımı kolay masaüstü uygulaması.
+
+<p> <a href="[https://github.com/vectordevworks/DDS2PNG](https://github.com/vectordevworks/DDS2PNG)"> <img src="[https://img.shields.io/badge/GitHub-Kaynak%20Kod-181717?style=for-the-badge&logo=github](https://img.shields.io/badge/GitHub-Kaynak%20Kod-181717?style=for-the-badge&logo=github)" alt="GitHub"> </a> <a href="[https://github.com/vectordevworks/DDS2PNG/issues](https://github.com/vectordevworks/DDS2PNG/issues)"> <img src="[https://img.shields.io/badge/Hata%20Bildir-Issues-red?style=for-the-badge&logo=github](https://img.shields.io/badge/Hata%20Bildir-Issues-red?style=for-the-badge&logo=github)" alt="Issues"> </a> <a href="LICENSE"> <img src="[https://img.shields.io/badge/Lisans-MIT-green?style=for-the-badge](https://img.shields.io/badge/Lisans-MIT-green?style=for-the-badge)" alt="MIT License"> </a> </p>
+
+<p> <img src="[https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python&logoColor=white)" alt="Python"> <img src="[https://img.shields.io/badge/Platform-Windows-blue?style=flat-square&logo=windows&logoColor=white](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square&logo=windows&logoColor=white)" alt="Windows"> <img src="[https://img.shields.io/badge/Format-DDS%20%E2%86%92%20PNG-orange?style=flat-square](https://img.shields.io/badge/Format-DDS%20%E2%86%92%20PNG-orange?style=flat-square)" alt="DDS to PNG"> </p>
 
 ---
 
-## İçindekiler
+### 🌐 Dil Seçimi
 
-<div align="center">
+<a href="README.md"><img src="[https://flagcdn.com/gb.svg](https://flagcdn.com/gb.svg)" width="20" alt="English"> English</a> |  
+<a href="README_DE.md"><img src="[https://flagcdn.com/de.svg](https://flagcdn.com/de.svg)" width="20" alt="Deutsch"> Deutsch</a> |  
+<a href="README_ES.md"><img src="[https://flagcdn.com/es.svg](https://flagcdn.com/es.svg)" width="20" alt="Español"> Español</a> |  
+<a href="README_FR.md"><img src="[https://flagcdn.com/fr.svg](https://flagcdn.com/fr.svg)" width="20" alt="Français"> Français</a> |  
+<a href="README_JA.md"><img src="[https://flagcdn.com/jp.svg](https://flagcdn.com/jp.svg)" width="20" alt="日本語"> 日本語</a> |  
+<a href="README_KO.md"><img src="[https://flagcdn.com/kr.svg](https://flagcdn.com/kr.svg)" width="20" alt="한국어"> 한국어</a> |  
+<a href="README_PT.md"><img src="[https://flagcdn.com/pt.svg](https://flagcdn.com/pt.svg)" width="20" alt="Português"> Português</a> |  
+<a href="README_RU.md"><img src="[https://flagcdn.com/ru.svg](https://flagcdn.com/ru.svg)" width="20" alt="Русский"> Русский</a> |  
+<a href="README_ZH_CN.md"><img src="[https://flagcdn.com/cn.svg](https://flagcdn.com/cn.svg)" width="20" alt="简体中文"> 简体中文</a> |  
+<strong><img src="[https://flagcdn.com/tr.svg](https://flagcdn.com/tr.svg)" width="20" alt="Türkçe"> Türkçe</strong>
 
-<div align="center">
+---
 
-<a href="#-genel-bakis">🔍 Genel Bakış</a> |
-<a href="#-ozellikler">✨ Özellikler</a> |
-<a href="#-gereksinimler">📋 Gereksinimler</a> |
-<a href="#-kurulum">📥 Kurulum</a> |
-<a href="#-sanal-ortam-istege-bagli">🐍 Sanal Ortam</a> |
-<a href="#-kullanim">🚀 Kullanım</a> |
-<a href="#-derleme-exe-olusturma">📦 Derleme (EXE)</a> |
-<a href="#-gelistirici">👨‍💻 Geliştirici</a> |
-<a href="#-lisans">📄 Lisans</a>
+### 📑 İçindekiler
 
-</div>
+<a href="#genel-bakis">🔍 Genel Bakış</a> |  
+<a href="#ozellikler">✨ Özellikler</a> |  
+<a href="#gereksinimler">📋 Gereksinimler</a> |  
+<a href="#kurulum">📥 Kurulum</a> |  
+<a href="#sanal-ortam-istege-bagli">🐍 Sanal Ortam</a> |  
+<a href="#kullanim">🚀 Kullanım</a> |  
+<a href="#derleme-exe-olusturma">📦 Derleme (EXE)</a> |  
+<a href="#gelistirici">👨‍💻 Geliştirici</a> |  
+<a href="#lisans">📄 Lisans</a>
 
 </div>
 
 ---
 
-## Genel Bakış
+## 🔍 Genel Bakış
 
-Uygulama, DDS biçimindeki doku dosyalarını Microsoft DirectXTex (Texconv) aracılığıyla PNG formatına dönüştürür. Dönüştürme işlemi grafik arayüzü üzerinden gerçekleştirilir; komut satırı komutlarıyla uğraşmanız gerekmez.
+**DDS2PNG**, DDS (DirectDraw Surface) biçimindeki doku dosyalarını PNG formatına dönüştürmenizi sağlayan, Python tabanlı hafif bir masaüstü uygulamasıdır.
+
+Basit grafik arayüzü sayesinde dosyalarınızı kolayca seçebilir ve dönüştürme işlemini gerçekleştirebilirsiniz. Komut satırı komutlarıyla uğraşmanız gerekmez.
+
+Dönüştürme işlemleri Microsoft DirectXTex (Texconv) aracılığıyla gerçekleştirilir.
 
 Texconv aracı uygulamayla birlikte `assets` klasöründe sunulur.
 
-## Özellikler
+## ✨ Özellikler
 
 - **DDS'den PNG'ye dönüştürme:** DDS dosyalarını PNG formatına dönüştürür.
+    
 - **Grafik arayüz:** Dosya seçme ve dönüştürme işlemlerini kolaylaştıran basit bir arayüz sunar.
+    
 - **Texconv desteği:** DDS dosyalarının dönüştürülmesi için Microsoft DirectXTex aracını kullanır.
+    
 - **Kolay kullanım:** Dönüştürme işlemini komut satırı kullanmadan gerçekleştirmenizi sağlar.
+    
 
-## Gereksinimler
+## 📋 Gereksinimler
 
 - Windows
+    
 - Python 3.x
+    
 - Pillow
+    
 - Microsoft DirectXTex (Texconv)
+    
 
 `tkinter`, `ctypes`, `json`, `math`, `os` ve `pathlib` modülleri Python standart kütüphanesinin bir parçasıdır.
 
@@ -101,13 +87,13 @@ Projeyle birlikte sunulan Texconv çalışmazsa veya manuel olarak indirmek iste
 
 **PowerShell (Winget):**
 
-```powershell
+```
 winget install --id Microsoft.DirectXTex.Texconv --exact
 ```
 
 Kurulumu kontrol etmek için:
 
-```powershell
+```
 winget list --id Microsoft.DirectXTex.Texconv
 ```
 
@@ -115,47 +101,51 @@ winget list --id Microsoft.DirectXTex.Texconv
 
 [Microsoft DirectXTex Releases](https://github.com/microsoft/DirectXTex/releases)
 
-## Kurulum
+## 📥 Kurulum
 
 1. Depoyu klonlayın:
+    
 
-```bash
+```
 git clone https://github.com/vectordevworks/DDS2PNG.git
 ```
 
 2. Proje klasörünü açın.
+    
 3. PowerShell'i proje klasöründe başlatın.
+    
 4. Gerekli Python paketlerini yükleyin:
+    
 
-```powershell
+```
 py -m pip install -r requirements.txt
 ```
 
-## Sanal Ortam (İsteğe Bağlı)
+## 🐍 Sanal Ortam (İsteğe Bağlı)
 
 Python bağımlılıklarını diğer projelerden ayrı tutmak için sanal ortam kullanabilirsiniz.
 
-1. Sanal ortam oluşturun:
+**1. Sanal ortam oluşturun:**
 
-```powershell
+```
 py -m venv .venv
 ```
 
-2. Sanal ortamı etkinleştirin:
+**2. Sanal ortamı etkinleştirin:**
 
-```powershell
+```
 .\.venv\Scripts\Activate.ps1
 ```
 
-3. Gerekli bağımlılıkları yükleyin:
+**3. Gerekli bağımlılıkları yükleyin:**
 
-```powershell
+```
 py -m pip install -r requirements.txt
 ```
 
-4. İşiniz bittiğinde sanal ortamı devre dışı bırakın:
+**4. İşiniz bittiğinde sanal ortamı devre dışı bırakın:**
 
-```powershell
+```
 deactivate
 ```
 
@@ -163,13 +153,13 @@ deactivate
 
 PowerShell yerine CMD kullanıyorsanız:
 
-```cmd
+```
 .venv\Scripts\activate.bat
 ```
 
 Sanal ortamdan çıkmak için:
 
-```cmd
+```
 deactivate
 ```
 
@@ -179,13 +169,13 @@ Bazı durumlarda PowerShell, güvenlik ilkesi (Execution Policy) nedeniyle sanal
 
 Bu durumda aşağıdaki komutu çalıştırabilirsiniz:
 
-```powershell
+```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
 Ardından sanal ortamı tekrar etkinleştirin:
 
-```powershell
+```
 .\.venv\Scripts\Activate.ps1
 ```
 
@@ -197,37 +187,41 @@ Sanal ortamı etkinleştirmek zorunlu değildir. Etkinleştirme işlemi başarı
 
 **Bağımlılıkları yüklemek için:**
 
-```powershell
+```
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 **Uygulamayı çalıştırmak için:**
 
-```powershell
+```
 .\.venv\Scripts\python.exe DDSConverter.pyw
 ```
 
 **Not:** Sanal ortam oluşturma, etkinleştirme, bağımlılıkları yükleme ve devre dışı bırakma işlemleri için yönetici izni gerekmez. Ancak Python'un doğru şekilde kurulu olması ve gerekli dosyalara erişim izninizin bulunması gerekir.
 
-## Kullanım
+## 🚀 Kullanım
 
 1. `DDSConverter.pyw` dosyasını çalıştırın:
+    
 
-```powershell
+```
 pyw .\DDSConverter.pyw
 ```
 
 Alternatif olarak:
 
-```powershell
+```
 pythonw .\DDSConverter.pyw
 ```
 
 2. Dönüştürmek istediğiniz DDS dosyasını seçin.
+    
 3. Çıktı klasörü olarak mevcut `convert` klasörünü seçebilir veya dilediğiniz klasörü belirleyebilirsiniz.
+    
 4. PNG formatına dönüştürme işlemini gerçekleştirin.
+    
 
-## Derleme (EXE Oluşturma)
+## 📦 Derleme (EXE Oluşturma)
 
 Python uygulamasını tek bir EXE dosyasına dönüştürmek için PyInstaller kullanılır.
 
@@ -238,8 +232,11 @@ Python uygulamasını tek bir EXE dosyasına dönüştürmek için PyInstaller k
 **Yöntem 1: Dosya Gezgini üzerinden terminal açma**
 
 1. DDS2PNG proje klasörünü Dosya Gezgini üzerinden açın.
+    
 2. Adres çubuğuna `cmd` veya `powershell` yazın.
+    
 3. Enter tuşuna basın.
+    
 
 Böylece terminal doğrudan proje klasöründe açılır.
 
@@ -249,13 +246,13 @@ CMD veya PowerShell'i açın ve aşağıdaki komutlardan uygun olanı kullanın.
 
 **CMD (Komut İstemi):**
 
-```cmd
+```
 cd /d "PROJE_KLASORUNUN_YOLU"
 ```
 
 **PowerShell:**
 
-```powershell
+```
 Set-Location -LiteralPath "PROJE_KLASORUNUN_YOLU"
 ```
 
@@ -270,21 +267,27 @@ Proje içerisinde bulunan `scripts` klasöründeki `buid.ps1` betiği, PyInstall
 Derleme betiği aşağıdaki işlemleri otomatik olarak gerçekleştirir:
 
 - Gerekli proje dosyalarını kontrol eder.
+    
 - PyInstaller kurulumunu kontrol eder.
+    
 - Önceki derleme dosyalarını temizler.
+    
 - `icon.ico` dosyasını EXE simgesi olarak kullanır.
+    
 - `assets` klasörünü EXE dosyasına dahil eder.
+    
 - Derleme çıktısını kontrol eder.
+    
 
 **CMD üzerinden çalıştırma:**
 
-```cmd
+```
 powershell -ExecutionPolicy Bypass -File "scripts\buid.ps1"
 ```
 
 **PowerShell üzerinden çalıştırma:**
 
-```powershell
+```
 .\scripts\buid.ps1
 ```
 
@@ -292,22 +295,26 @@ powershell -ExecutionPolicy Bypass -File "scripts\buid.ps1"
 
 Derleme başarıyla tamamlandığında EXE dosyası aşağıdaki konumda oluşturulur:
 
-```text
+```
 dist\DDS2PNG.exe
 ```
 
 **Yeni bir sürüm derlemek için izlenecek adımlar:**
 
 1. DDS2PNG proje klasörünü açın.
+    
 2. Adres çubuğuna `cmd` veya `powershell` yazarak terminali başlatın ya da mevcut terminal üzerinden proje klasörüne geçin.
+    
 3. Derleme betiğini çalıştırın.
+    
 4. Oluşturulan EXE dosyasını `dist` klasöründe bulabilirsiniz.
+    
 
 ### 4. Uygulamayı Çalıştırma
 
 Derleme başarıyla tamamlandıktan sonra uygulamayı çalıştırmak için aşağıdaki komutu kullanabilirsiniz:
 
-```cmd
+```
 dist\DDS2PNG.exe
 ```
 
@@ -315,10 +322,28 @@ Alternatif olarak `dist` klasörüne giderek `DDS2PNG.exe` dosyasına çift tık
 
 **Not:** Uygulamayı çalıştırmak için CMD veya PowerShell'i yönetici olarak açmanız gerekmez.
 
-## Geliştirici
+## 👨‍💻 Geliştirici
 
-**vectordevworks**
+<div align="center">
 
-## Lisans
+**VectorDevWorks**
+
+<a href="[https://github.com/vectordevworks](https://github.com/vectordevworks)"> <img src="[https://img.shields.io/badge/GitHub-VectorDevWorks-181717?style=for-the-badge&logo=github](https://img.shields.io/badge/GitHub-VectorDevWorks-181717?style=for-the-badge&logo=github)" alt="VectorDevWorks GitHub"> </a>
+
+</div>
+
+## 📄 Lisans
 
 Bu proje MIT Lisansı altında lisanslanmıştır. Ayrıntılar için proje deposundaki `LICENSE` dosyasına bakın.
+
+---
+
+<div align="center">
+
+**VectorDevWorks tarafından geliştirilmiştir.**
+
+⭐ Projeyi beğendiyseniz GitHub üzerinden yıldız vermeyi unutmayın!
+
+<a href="[https://github.com/vectordevworks/DDS2PNG](https://github.com/vectordevworks/DDS2PNG)"> <img src="[https://img.shields.io/badge/Proje%20Deposu-DDS2PNG-blue?style=for-the-badge&logo=github](https://img.shields.io/badge/Proje%20Deposu-DDS2PNG-blue?style=for-the-badge&logo=github)" alt="DDS2PNG Repository"> </a>
+
+</div>
