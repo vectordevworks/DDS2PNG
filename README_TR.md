@@ -37,13 +37,11 @@ Python tabanlı, hafif ve kullanımı kolay masaüstü uygulaması.
 <a href="#ozellikler">✨ Özellikler</a> |
 <a href="#gereksinimler">📋 Gereksinimler</a> |
 <a href="#kurulum">📥 Kurulum</a> |
-<a href="#sanal-ortam-istege-bagli">🐍 Sanal Ortam</a> |
+<a href="#sanal-ortam">🐍 Sanal Ortam</a> |
 <a href="#kullanim">🚀 Kullanım</a> |
-<a href="#derleme-exe-olusturma">📦 Derleme (EXE)</a> |
+<a href="#derleme">📦 Derleme (EXE)</a> |
 <a href="#gelistirici">👨‍💻 Geliştirici</a> |
 <a href="#lisans">📄 Lisans</a>
-
-</div>
 
 </div>
 
