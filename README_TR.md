@@ -53,15 +53,19 @@ DDS'den PNG'ye Dönüştürücü, DDS (DirectDraw Surface) biçimindeki doku dos
 
 <div align="center">
 
-<a href="#genel-bakis">Genel Bakış</a> |
-<a href="#ozellikler">Özellikler</a> |
-<a href="#gereksinimler">Gereksinimler</a> |
-<a href="#kurulum">Kurulum</a> |
-<a href="#sanal-ortam-istege-bagli">Sanal Ortam</a> |
-<a href="#kullanim">Kullanım</a> |
-<a href="#derleme-exe-olusturma">Derleme (EXE)</a> |
-<a href="#gelistirici">Geliştirici</a> |
-<a href="#lisans">Lisans</a>
+<div align="center">
+
+<a href="#-genel-bakis">🔍 Genel Bakış</a> |
+<a href="#-ozellikler">✨ Özellikler</a> |
+<a href="#-gereksinimler">📋 Gereksinimler</a> |
+<a href="#-kurulum">📥 Kurulum</a> |
+<a href="#-sanal-ortam-istege-bagli">🐍 Sanal Ortam</a> |
+<a href="#-kullanim">🚀 Kullanım</a> |
+<a href="#-derleme-exe-olusturma">📦 Derleme (EXE)</a> |
+<a href="#-gelistirici">👨‍💻 Geliştirici</a> |
+<a href="#-lisans">📄 Lisans</a>
+
+</div>
 
 </div>
 
