@@ -31,7 +31,7 @@ Python tabanlı, hafif ve kullanımı kolay masaüstü uygulaması.
 
 ### 📑 İçindekiler
 
-<a href="#genel-bakis">🔍 Genel Bakış</a> |  
+<a href="## 🔍 Genel Bakış">🔍 Genel Bakış</a> |  
 <a href="#ozellikler">✨ Özellikler</a> |  
 <a href="#gereksinimler">📋 Gereksinimler</a> |  
 <a href="#kurulum">📥 Kurulum</a> |  
