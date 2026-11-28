@@ -1,0 +1,39 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['D:/vectorrdevworks/Projeler/Yazılım Projeleri/Python/DDS2PNG/DDSConverter.pyw'],
+    pathex=[],
+    binaries=[],
+    datas=[('D:/vectorrdevworks/Projeler/Yazılım Projeleri/Python/DDS2PNG/icon.ico', '.'), ('D:/vectorrdevworks/Projeler/Yazılım Projeleri/Python/DDS2PNG/assets', 'assets')],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='DDS2PNG',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=['D:/vectorrdevworks/Projeler/Yazılım Projeleri/Python/DDS2PNG/icon.ico'],
+)
